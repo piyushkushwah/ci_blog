@@ -3,6 +3,7 @@
 <title>ciBlog</title>
 <link rel="stylesheet" href='https://bootswatch.com/4/flatly/bootstrap.min.css'>
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
+<script src="http://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
 </head>
 <body>
 
@@ -24,6 +25,11 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url(); ?>posts">Blog</a>
+      </li>
+</ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item" >
+        <a class="nav-link" href="<?php echo base_url(); ?>posts/create">Create Posts</a>
       </li>
     </ul>
     </div>

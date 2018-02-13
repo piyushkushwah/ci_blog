@@ -9,7 +9,7 @@
   </div>
   <div class="form-group">
     <label >Body</label>
-    <textarea name='body' class="form-control" 
+    <textarea id='editor1' name='body' class="form-control" 
      placeholder="Add Body" ><?php echo $post['body'];?></textarea>
   </div>
     <button type="submit" class="btn btn-default">Submit</button>
