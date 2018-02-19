@@ -1,6 +1,6 @@
 <h2><?= $title?></h2>
 <?php echo validation_errors();?>
-<?php echo form_open('posts/update'); ?>
+<?php echo form_open_multipart('posts/update'); ?>
 <input type="hidden" name='id'value="<?php echo $post['id']; ?>">
   <div class="form-group">
     <label >Title</label>
@@ -20,5 +20,11 @@
         <?php endforeach;?> 
         </select>
   </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+  <div class='form-group'>
+  <label>Upload Image</label><br>
+  <input id="file" type="file" name='userfile'  size='20' > 
+
+ 
+  </div>
+    <button type="submit" class="btn btn-success" onclick="file_upload()">Submit</button>
 </form>
