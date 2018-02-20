@@ -7,7 +7,7 @@
         </li>
         <?php echo form_open('categories/delete/'.$category['id']);?>
         <br>
-<a  style=' width:8%;' class="btn btn-success pull-left" href="<?php echo base_url();?>Categories/edit/<?php echo $category['id'];?>">EDIT</a>   
+<a  style=' width:8%;' class="btn btn-success pull-left" href="<?php echo base_url();?>Categories/edit/<?php echo $category['name'];?>">EDIT</a>   
 <input style=' width:8%;' type='submit' value='Delete' class='btn btn-danger'><br>
 </form>
 <?php endforeach;?>

@@ -35,8 +35,8 @@
             
         }
         public function edit($id){
-            
-            $data['categories']= $this->post_model->get_categories($id);
+
+             $data['categories']= $this->category_model->get_categories($id);
             if(empty($data['categories'])){
                 show_404();
             }
@@ -47,8 +47,12 @@
                 $this->load->view('templates/footer');
         }
         public function update(){
-            $this->category_model->update_category();
-           //redirect('categories');
+            $id = $this->input->post('id');
+            $data = array(
+                'name'=> $this->input->post('name')
+               );
+            $this->category_model->update_category($id,$data);
+           redirect('categories');
         }
     
     }

@@ -24,14 +24,11 @@
             $this->db->delete('categories');
             return true;
         }
-        public function update_category(){
-           $data = array(
-            'name'=> $this->input->post('name')
-           );
-           $this->db->where('id',$this->input->post('id'));
-           return $this->db->update('categories',$data);
-        
-        
+        public function update_category($id,$data){
+         print_r($this->input->post());
+         print_r($this->input->post('name'));
+         $this->db->where('id',$id);
+         return $this->db->update('categories',$data);    
          }
     }
 

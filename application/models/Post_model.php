@@ -41,6 +41,7 @@
             );
             $this->db->where('id',$this->input->post('id'));
             return $this->db->update('posts',$data);
+            
         }
         public function get_categories(){
             $this->db->order_by('name');
